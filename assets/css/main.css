@@ -1820,167 +1820,136 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
-/* Button */
+/* Ensure buttons are stacked vertically */
+ul.actions.special {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+    padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-radius: 8px;
-		border: 0;
-		cursor: pointer;
-		display: inline-block;
-		font-weight: 300;
-		height: 2.75em;
-		line-height: 2.75em;
-		min-width: 9.25em;
-		padding: 0 1.5em;
-		text-align: center;
-		text-decoration: none;
-		white-space: nowrap;
-	}
+/* Style for square pink buttons */
+button.primary,
+a.button.primary {
+    background-color: #ff69b4; /* Pink color */
+    border: none;
+    border-radius: 5px; /* Square corners */
+    padding: 15px 30px; /* Adjust size */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width */
+    display: block; /* Stack vertically */
+    margin: 10px 0; /* Space between buttons */
+    font-size: 16px; /* Adjust text size */
+    line-height: 1.5; /* Line height for multi-line text */
+}
 
-		input[type="submit"].icon,
-		input[type="reset"].icon,
-		input[type="button"].icon,
-		button.icon,
-		.button.icon {
-			padding-left: 1.35em;
-		}
+/* Hover effect for primary buttons */
+button.primary:hover,
+a.button.primary:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
 
-			input[type="submit"].icon:before,
-			input[type="reset"].icon:before,
-			input[type="button"].icon:before,
-			button.icon:before,
-			.button.icon:before {
-				margin-right: 0.5em;
-			}
+/* Icon buttons adjustment */
+input[type="submit"].icon,
+input[type="reset"].icon,
+input[type="button"].icon,
+button.icon,
+.button.icon {
+    padding-left: 1.35em;
+}
 
-		input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
-		button.fit,
-		.button.fit {
-			width: 100%;
-		}
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+    margin-right: 0.5em;
+}
 
-		input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
-		button.small,
-		.button.small {
-			font-size: 0.8em;
-		}
+/* Full width for .fit buttons */
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+    width: 100%;
+}
 
-		input[type="submit"].large,
-		input[type="reset"].large,
-		input[type="button"].large,
-		button.large,
-		.button.large {
-			font-size: 1.35em;
-		}
+/* Button size adjustments */
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+    font-size: 0.8em;
+}
 
-		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
-		input[type="button"].disabled,
-		input[type="button"]:disabled,
-		button.disabled,
-		button:disabled,
-		.button.disabled,
-		.button:disabled {
-			pointer-events: none;
-			opacity: 0.25;
-		}
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large,
+button.large,
+.button.large {
+    font-size: 1.35em;
+}
 
-		@media screen and (max-width: 736px) {
+/* Disabled button styles */
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+    pointer-events: none;
+    opacity: 0.25;
+}
 
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				min-width: 0;
-			}
+/* Media query for smaller screens */
+@media screen and (max-width: 736px) {
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        min-width: 0;
+    }
+}
 
-		}
+/* Hover and active effects */
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		background-color: transparent;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff !important;
-	}
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+button:active,
+.button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: rgba(255, 255, 255, 0.075);
-		}
+/* Icon color adjustment */
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+    color: rgba(255, 255, 255, 0.5);
+}
 
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		input[type="button"]:active,
-		button:active,
-		.button:active {
-			background-color: rgba(255, 255, 255, 0.2);
-		}
-
-		input[type="submit"].icon:before,
-		input[type="reset"].icon:before,
-		input[type="button"].icon:before,
-		button.icon:before,
-		.button.icon:before {
-			color: rgba(255, 255, 255, 0.5);
-		}
-
-		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		button.primary,
-		.button.primary {
-			background-color: #ee8cde;
-			color: #ffffff !important;
-			box-shadow: none;
-		}
-
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			button.primary:hover,
-			.button.primary:hover {
-				background-color: #ee8cde;
-			}
-
-			input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
-			button.primary:active,
-			.button.primary:active {
-				background-color: #ee8cde;
-			}
-
-			input[type="submit"].primary.icon:before,
-			input[type="reset"].primary.icon:before,
-			input[type="button"].primary.icon:before,
-			button.primary.icon:before,
-			.button.primary.icon:before {
-				color: #ffffff !important;
-			}
 
 /* Form */
 
@@ -2355,47 +2324,6 @@ input, select, textarea {
 		.icon.alt:active {
 			background-color: rgba(255, 255, 255, 0.2);
 		}
-/* Style for square pink buttons */
-button.primary {
-    background-color: #ff69b4; /* Pink color */
-    border: none;
-    border-radius: 5px; /* Square corners */
-    padding: 15px 30px; /* Adjust size */
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Full width */
-    display: block; /* Stack vertically */
-    margin: 10px 0; /* Space between buttons */
-    font-size: 16px; /* Adjust text size */
-    line-height: 1.5; /* Line height for multi-line text */
-}
-
-button.primary:hover {
-    background-color: #ff1493; /* Darker pink on hover */
-}
-
-a.button.primary {
-    display: block; /* Stack vertically */
-    text-decoration: none;
-    border-radius: 5px; /* Square corners */
-    padding: 15px 30px; /* Adjust size */
-    background-color: #ff69b4;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Full width */
-    margin: 10px 0; /* Space between buttons */
-    font-size: 16px; /* Adjust text size */
-    line-height: 1.5; /* Line height for multi-line text */
-}
-
-a.button.primary:hover {
-    background-color: #ff1493; /* Darker pink on hover */
-}
 
 
 /* Image */
