@@ -1953,7 +1953,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cc9f0;
+			background-color: #ee8cde;
 			color: #ffffff !important;
 			box-shadow: none;
 		}
@@ -1963,7 +1963,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #9acff2;
+				background-color: #ee8cde;
 			}
 
 			input[type="submit"].primary:active,
@@ -1971,7 +1971,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #7ec3ee;
+				background-color: #ee8cde;
 			}
 
 			input[type="submit"].primary.icon:before,
@@ -2355,18 +2355,22 @@ input, select, textarea {
 		.icon.alt:active {
 			background-color: rgba(255, 255, 255, 0.2);
 		}
-
-		/* Style for circular pink buttons */
+/* Style for square pink buttons */
 button.primary {
     background-color: #ff69b4; /* Pink color */
     border: none;
-    border-radius: 50%; /* Makes the button circular */
-    padding: 15px 30px; /* Adjust the size of the button */
+    border-radius: 5px; /* Square corners */
+    padding: 15px 30px; /* Adjust size */
     color: white;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%; /* Full width */
+    display: block; /* Stack vertically */
+    margin: 10px 0; /* Space between buttons */
+    font-size: 16px; /* Adjust text size */
+    line-height: 1.5; /* Line height for multi-line text */
 }
 
 button.primary:hover {
@@ -2374,15 +2378,19 @@ button.primary:hover {
 }
 
 a.button.primary {
-    display: inline-block; /* Make the link behave like a button */
+    display: block; /* Stack vertically */
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 5px; /* Square corners */
     padding: 15px 30px; /* Adjust size */
     background-color: #ff69b4;
     color: white;
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s ease;
+    width: 100%; /* Full width */
+    margin: 10px 0; /* Space between buttons */
+    font-size: 16px; /* Adjust text size */
+    line-height: 1.5; /* Line height for multi-line text */
 }
 
 a.button.primary:hover {
