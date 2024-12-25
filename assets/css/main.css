@@ -2356,6 +2356,40 @@ input, select, textarea {
 			background-color: rgba(255, 255, 255, 0.2);
 		}
 
+		/* Style for circular pink buttons */
+button.primary {
+    background-color: #ff69b4; /* Pink color */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    padding: 15px 30px; /* Adjust the size of the button */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.primary:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+a.button.primary {
+    display: inline-block; /* Make the link behave like a button */
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 15px 30px; /* Adjust size */
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a.button.primary:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+
 /* Image */
 
 	.image {
