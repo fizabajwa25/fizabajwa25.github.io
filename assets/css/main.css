@@ -3756,6 +3756,36 @@ input, select, textarea {
 
 		}
 
+		/* Container to hold the 3 sections */
+		#contact-section .section-container {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px; /* Adds space between the sections */
+		}
+
+		/* Styling for each section */
+		#contact-section .contact, 
+		#contact-section .linkedin, 
+		#contact-section .resume {
+			width: 32%; /* Each section takes up about one-third of the container */
+		}
+
+		/* Optional: Make sure the sections are responsive on smaller screens */
+		@media (max-width: 768px) {
+			#contact-section .section-container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#contact-section .contact, 
+			#contact-section .linkedin, 
+			#contact-section .resume {
+				width: 80%; /* Sections take up more space on smaller screens */
+				margin-bottom: 20px; /* Adds space between each section */
+			}
+		}
+
+
 /* Wrapper */
 
 	#wrapper {
